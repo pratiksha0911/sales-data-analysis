@@ -6,16 +6,17 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
+
+import sys
+sys.path.append('c:/users/pratik bhosale\appdata\local\programs\python\python313\lib\site-packages (2024.10.0)')
+
 from sklearn.metrics import mean_squared_error
 import seaborn as sns
 
+
 import io
-import sys
 
 st.set_page_config(layout="wide")
-
-# Ensure dependencies are correctly loaded
-sys.path.append(r'c:\users\pratik bhosale\appdata\local\programs\python\python313\lib\site-packages (2024.10.0)')
 
 # Set up Streamlit page
 st.title("Zomato Data Analysis and Restaurant Recommendation App")
@@ -30,8 +31,6 @@ def load_default_data():
         return data
     except Exception as e:
         st.error(f"Error loading default dataset: {e}")
-        import traceback
-        st.text(traceback.format_exc())
         return None
 
 # Load the data
