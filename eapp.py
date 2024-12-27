@@ -22,7 +22,7 @@ st.set_page_config(layout="wide")
 st.title("Zomato Data Analysis and Restaurant Recommendation App")
 
 # File path for the default dataset
-DEFAULT_FILE_PATH = "C://Users//Pratik Bhosale//Downloads//zomato.csv"
+DEFAULT_FILE_PATH = "zomato.csv"
 
 # Load default dataset
 def load_default_data():
