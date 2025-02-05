@@ -7,8 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
-import sys
-sys.path.append('c:/users/pratik bhosale\appdata\local\programs\python\python313\lib\site-packages (2024.10.0)')
+#import sys
+#sys.path.append('c:/users/pratik bhosale\appdata\local\programs\python\python313\lib\site-packages (2024.10.0)')
 
 from sklearn.metrics import mean_squared_error
 import seaborn as sns
