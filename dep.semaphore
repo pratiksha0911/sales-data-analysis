@@ -1,0 +1,31 @@
+version: v1.0
+name: Zomato Web App CI/CD Pipeline
+
+# Define the machine type
+agent:
+  machine:
+    type: e1-standard-2
+
+blocks:
+  - name: Install Dependencies
+    task:
+      jobs:
+        - name: Setup Python
+          commands:
+            - checkout
+            - pip install -r requirements.txt
+  
+  - name: Run Tests
+    task:
+      jobs:
+        - name: Unit Tests
+          commands:
+            - pytest tests/  # Runs all tests
+
+  - name: Deploy to Heroku
+    task:
+      jobs:
+        - name: Deploy
+          commands:
+            - git remote add heroku https://git.heroku.com/YOUR-HEROKU-APP.git
+            - git push heroku main
